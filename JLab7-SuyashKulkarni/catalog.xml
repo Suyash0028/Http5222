@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalog.xsd">
+  <product sku="29043" category="audio" isFeatured="no" price="219.99">
+    <name>Sennheiser PC350 Gaming Stereo Headset</name>
+    <description>Gaming stereo headset, 10-26000Hz, 150ohm, 10-ft cord, noise-cancelling microphone.</description>
+    <colors>
+      <color>Black</color>
+      <color>Red</color>
+    </colors>
+  </product>
+  <product sku="57134" category="appliance" isFeatured="yes" price="459.99">
+    <name>Whirlpool Energy Saver Washer</name>
+    <thumbnail>washer-thumb.png</thumbnail>
+    <images>
+      <image name="Front View of washer">washer-front.jpg</image>
+      <image name="Washer controls">washer-controls.jpg</image>
+    </images>
+    <description>Front-loading washer from Whirlpool helps save money</description>
+    <sizes>
+      <size>3.9 cubic feet</size>
+    </sizes>
+    <colors>
+      <color>White</color>
+      <color>Silver</color>
+    </colors>
+  </product>
+</catalog>

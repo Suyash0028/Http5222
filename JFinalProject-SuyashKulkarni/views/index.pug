@@ -1,0 +1,38 @@
+extends layout
+
+block main-content 
+  h1 Events in Toronto, Canada
+  body
+    .container
+      each card in events
+        .card-container.bg-white
+          img.card-img(src=card.eventImg, alt="Card image")
+          .detail-section
+            a(href=`/events/details/${card.eventId}`)
+              h5.card-title #{card.eventTitle}
+            p.card-text #{card.eventMinPrice}
+            p.card-text #{card.eventVenue}
+            if card.eventStatus && card.eventStatus.trim().length > 0
+                p.alert.alert-danger(text-center role="alert")
+                    | #{card.eventStatus}
+
+    //- Pagination controls
+    div.container-fluid
+        div.row.align-items-center.justify-content-center
+            div.col-sm-6.text-center
+                div.my-div
+                    form(action="/", method="GET")
+                        .btn-group
+                            if page === 1
+                                button.btn.btn-primary(type="button", disabled) 
+                                    i.fas.fa-chevron-left
+                            else
+                                button.btn.btn-primary(type="submit", name="page", value= page - 1)
+                                    i.fas.fa-chevron-left
+                            p.page-number.text-nowrap.px-4.m-0 #{page}
+                            if page === totalPages
+                                button.btn.btn-primary(type="button", disabled) 
+                                    i.fas.fa-chevron-right
+                            else
+                                button.btn.btn-primary(type="submit", name="page", value= page + 1)
+                                    i.fas.fa-chevron-right

@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+a{
+    color: green;
+    text-decoration: none;
+    padding: 1em;
+}
+a:hover{
+    color: red;
+}
+ul,li{
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.product {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+}
+footer {
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+  

@@ -1,0 +1,16 @@
+<!ELEMENT books (book*)>
+<!ELEMENT book (title,language,author+)>
+<!ATTLIST book 
+    ISBN CDATA #REQUIRED
+    yearPublished CDATA #REQUIRED
+>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT author (name, email?, number?, bio)>
+<!ELEMENT name (first, middle?, last)>
+<!ELEMENT first (#PCDATA)>
+<!ELEMENT middle (#PCDATA)>
+<!ELEMENT last (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT bio (#PCDATA)>

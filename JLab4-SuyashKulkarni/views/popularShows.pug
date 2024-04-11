@@ -1,0 +1,16 @@
+extends layout 
+
+
+block main-content 
+    h1 Top 15 Popular Shows
+    table
+      thead
+        tr
+          th Show Title
+          th Year
+      tbody
+        each show in shows
+          tr
+            td
+              a(href=`https://imdb.com/title/${show.ids.imdb}`) #{show.title}
+            td #{show.year}

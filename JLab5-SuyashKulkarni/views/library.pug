@@ -1,0 +1,14 @@
+extends layout
+
+block main-content
+  form(action="/")
+    button(type="submit") <- Back
+  - let name = libData.querySelector('name').textContent;
+  - let desc = libData.querySelector('description').textContent;
+  - let add = libData.querySelector('address').textContent;
+  - let phnNum = libData.querySelector('phoneNumber').textContent;
+  div 
+    h2 #{name}
+    p #{desc}
+    p #{add}
+    p #{phnNum}

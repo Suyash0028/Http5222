@@ -1,0 +1,18 @@
+extends layout
+
+block main-content
+  h1 Libraries 
+  each library in libraries
+    - let placeMarks = library.querySelectorAll("Placemark");
+    each placeMark in placeMarks
+      - let libId = placeMark.getAttribute("id");
+      - let name = placeMark.querySelector("name").textContent; 
+      - let desc = placeMark.querySelector("description").textContent;
+      - let add = placeMark.querySelector("address").textContent;
+      - let phnNum = placeMark.querySelector("phoneNumber").textContent; 
+      div 
+        h2 #{name}
+        p #{desc}
+        p #{add}
+        p #{phnNum}
+        a(href=`/library/${libId}`) View Library Details

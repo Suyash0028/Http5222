@@ -1,0 +1,13 @@
+.container{
+    margin: 20px;
+}
+.question-container{
+    border: 1px solid black;
+    padding: 10px;
+}
+.answer-container{
+    color: Green;
+    font-weight: 800;
+    padding: 10px;
+    font-size: large;
+}

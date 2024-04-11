@@ -1,0 +1,8 @@
+header#header.header-container 
+  h2#site-name 
+    a(href="/") Test website 
+  nav#main-navigation 
+    ul
+      each link in menu 
+        li 
+          a(href=link.path) #{link.name}

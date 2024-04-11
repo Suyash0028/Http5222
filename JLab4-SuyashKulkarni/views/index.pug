@@ -1,0 +1,13 @@
+extends layout 
+
+
+block main-content 
+  //You can overwrite the main-content block by writing block content
+  //in the template file which is extending.
+  h1.page-title Hello! 
+  p Here are some trending movies: 
+  ul 
+    each m in movies
+      li 
+        <strong>#{m.movie.title}</strong> (#{m.movie.year})
+

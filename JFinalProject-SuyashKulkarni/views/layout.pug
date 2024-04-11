@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Event Management System
+    link(rel="stylesheet", href="/styles/styles.css")
+    link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.p-3
+      .container-fluid
+        .row.align-items-center.justify-content-between.w-100
+          .col-auto
+            a.navbar-brand(href="#") Event Management System
+          .col-auto
+            button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarNav", aria-controls="navbarNav", aria-expanded="false", aria-label="Toggle navigation")
+              span.navbar-toggler-icon
+          .col-auto
+            #navbarNav.collapse.navbar-collapse
+              ul.navbar-nav.ml-auto
+                li.nav-item
+                  a.nav-link(href="/") Events
+                form.form-inline.my-2.my-lg-0(id='search-form', action='/events/search', method='GET', class='form-inline')
+                  div.input-group
+                    input.form-control(type="search", placeholder="Search in this page", aria-label="Search", name='q',data-toggle="tooltip", title="Search in this page")
+                    div.input-group-append
+                      button.mr-sm-2(type='submit', class='btn btn-light') 
+                        span.fa.fa-search 
+                  div.input-group
+                    div.input-group-prepend
+                      span.input-group-text
+                        i.fa.fa-map-marker-alt
+                    input.form-control(type="text", placeholder="Location", value="Toronto", aria-label="Location", disabled)
+
+    .container-fluid.bg-img.py-4
+      block main-content
+
+    footer.footer.footer-dark.bg-dark
+      .row.align-items-center
+        .col
+          p.card-footer-text.text-muted © All Rights Reserved by Owners of Event Management System
+
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
